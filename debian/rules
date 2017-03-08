@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+%:
+	dh $@ --parallel
+
+.PHONY: override_dh_auto_configure
+override_dh_auto_configure:
+	./autogen.sh
+	dh_auto_configure -- \
+	    --includedir=\$${prefix}/include/metlibs \
+	    --disable-shared \
+	    CFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs"

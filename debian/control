@@ -1,0 +1,20 @@
+Source: metlibs-common-putools
+Priority: optional
+Maintainer: Borge Moe <borge.moe@met.no>
+Build-Depends:  debhelper (>= 9),
+ autoconf (>=2.61), automake (>= 1.11), libtool (>= 1.5), pkg-config,
+ metlibs-puctools-dev,
+ libboost-dev, libboost-date-time-dev,
+ libgtest-dev
+Standards-Version: 3.9.2
+Section: libs
+
+Package: metlibs-putools-dev
+Section: libdevel
+Architecture: any
+Depends: metlibs-puctools-dev, metlibs-milogger-dev,
+ libboost-dev, libboost-date-time-dev,
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: metlibs utility classes (miTime, miString, etc.)
+ puTools contains utility classes like miTime, miString, etc.
