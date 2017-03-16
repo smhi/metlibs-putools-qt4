@@ -325,7 +325,7 @@ miutil::miDate::weekday(const std::string& l) const
     return nameNN[a];
   if (la=="de")
     return nameDE[a];
-  if (la=="se" || la=="sv")
+  if (la=="se" || la=="sv" || la=="swe")
     return nameSE[a];
 
   return nameEN[a];
@@ -399,7 +399,7 @@ miutil::miDate::shortweekday(const std::string& l) const
     return nameNN[a];
   if (la=="de")
     return nameDE[a];
-  if (la=="se" || la=="sv")
+  if (la=="se" || la=="sv" || la=="swe")
     return nameSE[a];
 
   return nameEN[a];
@@ -480,7 +480,7 @@ miutil::miDate::monthname(const std::string& l) const
     return nameNO[Month-1];
   if( la=="de")
     return nameDE[Month-1];
-  if (la=="se" || la=="sv")
+  if (la=="se" || la=="sv" || la=="swe")
     return nameSE[Month-1];
 
   return nameEN[Month-1];
@@ -561,7 +561,7 @@ miutil::miDate::shortmonthname(const std::string& l) const
       return nameNO[Month-1];
   if (la=="de")
       return nameDE[Month-1];
-  if (la=="se" || la=="sv")
+  if (la=="se" || la=="sv" || la=="swe")
       return nameSE[Month-1];
   
   return nameEN[Month-1];
