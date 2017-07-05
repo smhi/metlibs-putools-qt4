@@ -44,9 +44,9 @@ public:
   miString(const std::string& s)
     : std::string(s) {}
 
-  METLIBS_DEPRECATED(METLIBS_CONCAT(explicit miString(const int    d, const int width=0, const char fill='0')), "use 'from_number(...)'");
-  METLIBS_DEPRECATED(METLIBS_CONCAT(explicit miString(const double d, const int prec =-1)), "use 'from_number(...)'");
-  METLIBS_DEPRECATED(METLIBS_CONCAT(explicit miString(const float  d, const int prec =-1)), "use 'from_number(...)'");
+  METLIBS_DEPRECATED(METLIBS_CONCAT(explicit miString(const int    d, const int width=0, const char fill='0')), "use 'miutil::from_number(...)'");
+  METLIBS_DEPRECATED(METLIBS_CONCAT(explicit miString(const double d, const int prec =-1)), "use 'miutil::from_number(...)'");
+  METLIBS_DEPRECATED(METLIBS_CONCAT(explicit miString(const float  d, const int prec =-1)), "use 'miutil::from_number(...)'");
 
   METLIBS_DEPRECATED(const char* cStr() const, "use c_str() directly")
   { return c_str(); }
@@ -57,7 +57,7 @@ public:
   METLIBS_DEPRECATED(bool exists() const, "use 'not empty()'")
   { return !empty(); }
 
-  METLIBS_DEPRECATED(METLIBS_CONCAT(void trim(bool right=true, bool left=true, const miString=whitespaces)), "use 'miutil::split(...)'");
+  METLIBS_DEPRECATED(METLIBS_CONCAT(void trim(bool right=true, bool left=true, const miString=whitespaces)), "use 'miutil::trim(...)'");
   METLIBS_DEPRECATED(METLIBS_CONCAT(void rtrim(const miString ws=whitespaces)), "use 'miutil::trim(...)'")
         { miutil::trim(*this, false, true, ws.c_str()); }
   METLIBS_DEPRECATED(METLIBS_CONCAT(inline void ltrim(const miString ws=whitespaces)), "use 'miutil::trim(...)'")
@@ -97,10 +97,10 @@ public:
   METLIBS_DEPRECATED(bool isNumber() const, "use 'miutil::is_number(...)' directly");
   METLIBS_DEPRECATED(bool isInt()    const, "use 'miutil::is_int(...)' directly");
 
-  METLIBS_DEPRECATED(int    toInt(    int    undefined=INT_MIN  ) const, "use 'to_int(...)'");
-  METLIBS_DEPRECATED(float  toFloat(  float  undefined=NAN      ) const, "use 'to_double(...)'");
-  METLIBS_DEPRECATED(double toDouble( double undefined=NAN      ) const, "use 'to_double(...)'");
-  METLIBS_DEPRECATED(long   toLong(   long   undefined=LONG_MIN ) const, "use 'to_long(...)'");
+  METLIBS_DEPRECATED(int    toInt(    int    undefined=INT_MIN  ) const, "use 'miutil::to_int(...)'");
+  METLIBS_DEPRECATED(float  toFloat(  float  undefined=NAN      ) const, "use 'miutil::to_double(...)'");
+  METLIBS_DEPRECATED(double toDouble( double undefined=NAN      ) const, "use 'miutil::to_double(...)'");
+  METLIBS_DEPRECATED(long   toLong(   long   undefined=LONG_MIN ) const, "use 'miutil::to_long(...)'");
 
 };
 
